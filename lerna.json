@@ -11,7 +11,7 @@
   "private": false,
   "command": {
     "version": {
-      "message": "chore(release): :package: Prepare release",
+      "message": "chore(release): 🔖 Prepare release",
       "allowBranch": "main"
     }
   }
