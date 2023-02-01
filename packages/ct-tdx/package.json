@@ -7,8 +7,9 @@
     "node": ">= 18.x",
     "npm": ">= 8.x"
   },
-  "source": "src/index.js",
+  "source": "src/index.ts",
   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "main": "dist/index.cjs",
   "targets": {
     "main": {
@@ -27,13 +28,15 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "parcel build ./src/index.js --no-source-maps",
-    "docs": "documentation readme ./src/index.js --section=API",
+    "build": "parcel build ./src/index.ts --no-source-maps",
+    "changelog": "changelogen",
+    "docs": "documentation readme ./src/index.ts --section=API",
     "postbuild": "npm run docs",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",

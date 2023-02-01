@@ -30,7 +30,6 @@
   // "include": ["./packages/**/*.ts", "./packages/**/*.js"],
   "exclude": [
     "node_modules",
-    "./**/node_modules/**",
     "./packages/package-starter",
     "./packages/ct-azure",
     ".history",

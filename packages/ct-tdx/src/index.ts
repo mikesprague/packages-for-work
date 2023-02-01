@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import https from 'https';
 
 /**
@@ -14,7 +14,7 @@ import https from 'https';
  * @param    {string} obj.password
  * @param    {string} obj.apiBaseUrl
  * @param    {string} [obj.userAgent='CIT Cloud Team Automation']
- * @returns  {Object} with authToken data
+ * @returns  {Promise<string>} with authToken data
  */
 export interface getAuthTokenParams {
   username: string;
@@ -27,7 +27,7 @@ export const getAuthToken = async ({
   password,
   apiBaseUrl,
   userAgent = 'CIT Cloud Team Automation',
-}: getAuthTokenParams) => {
+}: getAuthTokenParams): Promise<string> => {
   const getTokenConfig: AxiosRequestConfig = {
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
@@ -55,25 +55,36 @@ export const getAuthToken = async ({
  *   authToken,
  *   method: 'GET'
  * });
- * @param    {Object} obj object with parameters
+ * @param    {makeApiCallParams} obj object with parameters
  * @param    {string} obj.apiBaseUrl
  * @param    {string} obj.endpointPath
  * @param    {string} obj.authToken
  * @param    {string} [obj.requestMethod='OPTIONS']
  * @param    {string} [obj.userAgent='CIT Cloud Team Automation']
  * @param    {Object} [obj.requestBody=null]
- * @returns  {Object} with JSON data
+ * @returns  {Promise<any>} Object with JSON data
  */
+
+export interface makeApiCallParams {
+  apiBaseUrl: string;
+  endpointPath: string;
+  authToken: string;
+  requestMethod?: string;
+  requestBody?: string;
+  ignoreSslErrors?: boolean;
+  userAgent?: string;
+}
+
 export const makeApiCall = async ({
   apiBaseUrl,
   endpointPath,
   authToken,
   requestMethod = 'OPTIONS',
-  requestBody = null,
+  requestBody = undefined,
   ignoreSslErrors = false,
   userAgent = 'CIT Cloud Team Automation',
-}) => {
-  const httpClientConfig = {
+}: makeApiCallParams): Promise<any> => {
+  const httpClientConfig: AxiosRequestConfig = {
     headers: {
       Authorization: `Bearer ${authToken}`,
       Accept: 'application/json',
@@ -87,14 +98,13 @@ export const makeApiCall = async ({
     httpClientConfig.httpsAgent = new https.Agent({
       rejectUnauthorized: false,
     });
-    httpClientConfig.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   }
   if (
     (requestMethod.toUpperCase() === 'POST' ||
       requestMethod.toUpperCase() === 'PUT') &&
     requestBody
   ) {
-    httpClientConfig.body = requestBody;
+    httpClientConfig.data = requestBody;
   }
 
   const apiData = await axios(httpClientConfig).then(
@@ -113,14 +123,27 @@ export const makeApiCall = async ({
  *   apiBaseUrl: 'https://tdx.your.domain/TDWebApi/api',
  *   appId: 99,
  * });
- * @param    {Object} obj with parameters
+ * @param    {getTicketParams} obj with parameters
  * @param    {number} obj.ticketId
  * @param    {string} obj.authToken
  * @param    {string} obj.apiBaseUrl
  * @param    {number} obj.appId
- * @returns  {Object} with JSON data
+ * @returns  {Promise<any>} Object with JSON data
  */
-export const getTicket = async ({ ticketId, authToken, apiBaseUrl, appId }) => {
+
+export interface getTicketParams {
+  ticketId: number;
+  authToken: string;
+  apiBaseUrl: string;
+  appId: number;
+}
+
+export const getTicket = async ({
+  ticketId,
+  authToken,
+  apiBaseUrl,
+  appId,
+}: getTicketParams): Promise<any> => {
   const ticketData = await makeApiCall({
     apiBaseUrl,
     endpointPath: `/${appId}/tickets/${ticketId}`,
@@ -140,19 +163,27 @@ export const getTicket = async ({ ticketId, authToken, apiBaseUrl, appId }) => {
  *   appId: 99,
  *   ticketData: objectWithNewTicketData,
  * });
- * @param    {Object} obj with parameters
+ * @param    {createTicketParams} obj with parameters
  * @param    {string} obj.authToken
  * @param    {string} obj.apiBaseUrl
  * @param    {number} obj.appId
  * @param    {Object} obj.ticketData
- * @returns  {Object} with JSON data for new ticket
+ * @returns  {Promise<any>} Object with JSON data for new ticket
  */
+
+export interface createTicketParams {
+  authToken: string;
+  apiBaseUrl: string;
+  appId: number;
+  ticketData: any;
+}
+
 export const createTicket = async ({
   authToken,
   apiBaseUrl,
   appId,
   ticketData,
-}) => {
+}: createTicketParams): Promise<any> => {
   const newTicketData = await makeApiCall({
     apiBaseUrl,
     endpointPath: `/${appId}/tickets?NotifyRequestor=false`,
@@ -170,7 +201,9 @@ export const createTicket = async ({
  * @example  await getCloudTeamTicketDefaults('https://url-for-endpoint.with/automated-ticket-defaults.json');
  * @returns  {Object} with JSON data
  */
-export const getCloudTeamTicketDefaults = async (endpointUrl) => {
+export const getCloudTeamTicketDefaults = async (
+  endpointUrl: string,
+): Promise<any> => {
   const ticketDefaults = await axios(endpointUrl).then(
     (response) => response.data,
   );

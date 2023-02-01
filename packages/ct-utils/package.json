@@ -28,12 +28,14 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
     "clean": "rimraf dist",
     "build": "parcel build ./src/index.ts --no-source-maps",
+    "changelog": "changelogen",
     "check": "tsc --noEmit",
     "docs": "documentation readme ./src/index.ts --section=API",
     "postbuild": "npm run docs",
