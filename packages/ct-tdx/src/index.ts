@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 import https from 'https';
 
 /**
@@ -9,20 +9,26 @@ import https from 'https';
  *   password: 'super-secret-string',
  *   apiBaseUrl: 'https://tdx.your.domain/TDWebApi/api'
  * });
- * @param    {Object} obj object with parameters
+ * @param    {getAuthTokenParams} obj object with parameters
  * @param    {string} obj.username
  * @param    {string} obj.password
  * @param    {string} obj.apiBaseUrl
  * @param    {string} [obj.userAgent='CIT Cloud Team Automation']
  * @returns  {Object} with authToken data
  */
+export interface getAuthTokenParams {
+  username: string;
+  password: string;
+  apiBaseUrl: string;
+  userAgent?: string;
+}
 export const getAuthToken = async ({
   username,
   password,
   apiBaseUrl,
   userAgent = 'CIT Cloud Team Automation',
-}) => {
-  const getTokenConfig = {
+}: getAuthTokenParams) => {
+  const getTokenConfig: AxiosRequestConfig = {
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
       'User-Agent': userAgent,

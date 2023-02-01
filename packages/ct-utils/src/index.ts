@@ -8,13 +8,24 @@ import fs from 'node:fs';
  *   fileName: 'my-data.json',
  *   data: referenceToDataObject
  * });
- * @param    {Object} obj object with parameters
+ * @param    {writeDataAsJsonFileParams} obj object with parameters
  * @param    {string} obj.path
  * @param    {string} obj.fileName
  * @param    {Object} obj.data
- * @returns  {boolean} true if file was written successfully
+ * @returns  {Promise<boolean>} true if file was written successfully
  */
-export const writeDataAsJsonFile = async ({ path, fileName, data }) => {
+
+export interface writeDataAsJsonFileParams {
+  path: string;
+  fileName: string;
+  data: any;
+}
+
+export const writeDataAsJsonFile = async ({
+  path,
+  fileName,
+  data,
+}: writeDataAsJsonFileParams): Promise<boolean> => {
   try {
     if (!fs.existsSync(path)) {
       await fs.mkdirSync(path);

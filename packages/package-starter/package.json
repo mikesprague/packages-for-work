@@ -1,8 +1,9 @@
 {
-  "name": "@mikesprague/ct-utils",
-  "version": "0.0.1",
-  "description": "Utilities and helper methods",
+  "name": "@mikesprague/package-starter",
+  "version": "0.0.0",
+  "description": "Template to use for new modules",
   "type": "module",
+  "private": true,
   "engines": {
     "node": ">= 18.x",
     "npm": ">= 8.x"
@@ -34,9 +35,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "parcel build ./src/index.ts --no-source-maps",
-    "check": "tsc --noEmit",
-    "docs": "documentation readme ./src/index.ts --section=API",
-    "postbuild": "npm run docs",
+    "postbuild": "documentation readme ./src/index.ts --section=API",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",
     "start": "npm run watch",
@@ -45,12 +44,12 @@
   },
   "publishConfig": {
     "@mikesprague:registry": "https://npm.pkg.github.com",
-    "access": "public"
+    "access": "restricted"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikesprague/packages.git",
-    "directory": "packages/ct-utils"
+    "directory": "packages/package-starter"
   },
   "author": {
     "name": "Michael Sprague",
@@ -60,5 +59,7 @@
   "bugs": {
     "url": "https://github.com/mikesprague/packages/issues"
   },
-  "homepage": "https://github.com/mikesprague/packages#readme"
+  "homepage": "https://github.com/mikesprague/packages#readme",
+  "dependencies": {},
+  "devDependencies": {}
 }

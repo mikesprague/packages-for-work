@@ -42,7 +42,7 @@ See API section below for docs on each method available
 
 #### Parameters
 
-*   `obj` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** object with parameters
+*   `obj` **writeDataAsJsonFileParams** object with parameters
 
     *   `obj.path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
     *   `obj.fileName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
@@ -58,7 +58,7 @@ await writeDataAsJsonFile({
 });
 ```
 
-Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** true if file was written successfully
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** true if file was written successfully
 
 ## Changelog
 
