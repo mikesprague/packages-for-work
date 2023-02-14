@@ -6,7 +6,7 @@
   "scripts": {
     "build": "nx run-many --target=build --exclude=@mikesprague/package-starter",
     "bump": "lerna version --no-private --no-push",
-    "prebuild": "nx run-many --target=clean --exclude=@mikesprague/package-starter",
+    "prebuild": "nx run-many --targets=typecheck,clean --exclude=@mikesprague/package-starter",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {

@@ -34,14 +34,17 @@
     }
   },
   "scripts": {
-    "clean": "rimraf dist",
     "build": "parcel build ./src/index.ts --no-source-maps",
-    "postbuild": "documentation readme ./src/index.ts --section=API",
-    "prebuild": "npm run clean",
+    "changelog": "changelogen",
+    "clean": "rimraf dist",
+    "docs": "documentation readme ./src/index.ts --section=API",
+    "postbuild": "npm run docs",
+    "prebuild": "npm run clean && npm run typecheck",
     "prestart": "npm run clean",
     "start": "npm run watch",
-    "watch": "parcel watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit",
+    "watch": "parcel watch"
   },
   "publishConfig": {
     "@mikesprague:registry": "https://npm.pkg.github.com",
