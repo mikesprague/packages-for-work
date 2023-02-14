@@ -53,7 +53,7 @@ See API section below for docs on each method available
 
 #### Parameters
 
-*   `obj` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** object with parameters
+*   `obj` **getAuthTokenParams** object with parameters
 
     *   `obj.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
     *   `obj.password` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
@@ -70,13 +70,13 @@ const authToken = await getAuthToken({
 });
 ```
 
-Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** with authToken data
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** with authToken data
 
 ### makeApiCall
 
 #### Parameters
 
-*   `obj` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** object with parameters
+*   `obj` **makeApiCallParams** object with parameters
 
     *   `obj.apiBaseUrl` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
     *   `obj.endpointPath` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
@@ -96,13 +96,13 @@ const apiData = await makeApiCall({
 });
 ```
 
-Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** with JSON data
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<any>** Object with JSON data
 
 ### getTicket
 
 #### Parameters
 
-*   `obj` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** with parameters
+*   `obj` **getTicketParams** with parameters
 
     *   `obj.ticketId` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**&#x20;
     *   `obj.authToken` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
@@ -120,13 +120,13 @@ const ticketData = await getTicket({
 });
 ```
 
-Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** with JSON data
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<any>** Object with JSON data
 
 ### createTicket
 
 #### Parameters
 
-*   `obj` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** with parameters
+*   `obj` **createTicketParams** with parameters
 
     *   `obj.authToken` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
     *   `obj.apiBaseUrl` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
@@ -144,7 +144,7 @@ const newTicket = await createTicket({
 });
 ```
 
-Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** with JSON data for new ticket
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<any>** Object with JSON data for new ticket
 
 ### getCloudTeamTicketDefaults
 

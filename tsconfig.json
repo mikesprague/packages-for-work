@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "sourceMap": true,
+    "strictFunctionTypes": true,
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ESNext"],
+    "moduleResolution": "Node",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "."
+  },
+  "ts-node": {
+    "esm": true,
+    "swc": true
+  },
+  "references": [
+    { "path": "./packages/ct-tdx/" },
+    { "path": "./packages/ct-utils/" }
+  ],
+  // "include": ["./packages/**/*.ts", "./packages/**/*.js"],
+  "exclude": [
+    "node_modules",
+    "./packages/package-starter",
+    "./packages/ct-azure",
+    ".history",
+    ".git",
+    ".github",
+    ".parcel-cache",
+    "./**/dist/**"
+  ]
+}
