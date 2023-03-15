@@ -65,5 +65,8 @@
   },
   "homepage": "https://github.com/mikesprague/packages#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "eslintConfig": {
+    "extends": "../../package.json"
+  }
 }

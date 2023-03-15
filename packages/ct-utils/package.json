@@ -62,5 +62,8 @@
   "bugs": {
     "url": "https://github.com/mikesprague/packages/issues"
   },
-  "homepage": "https://github.com/mikesprague/packages#readme"
+  "homepage": "https://github.com/mikesprague/packages#readme",
+  "eslintConfig": {
+    "extends": "../../package.json"
+  }
 }
