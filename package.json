@@ -37,7 +37,7 @@
     "@babel/core": "7.21.3",
     "@parcel/packager-ts": "^2.8.3",
     "@parcel/transformer-typescript-types": "^2.8.3",
-    "@types/node": "18.15.5",
+    "@types/node": "18.15.7",
     "@typescript-eslint/eslint-plugin": "5.56.0",
     "@typescript-eslint/parser": "5.56.0",
     "changelogen": "0.5.1",
