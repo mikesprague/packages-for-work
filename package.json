@@ -71,6 +71,7 @@
       "prettier"
     ],
     "plugins": [
+      "@typescript-eslint",
       "import",
       "prettier"
     ],
