@@ -28,7 +28,7 @@ export const writeDataAsJsonFile = async ({
 }: writeDataAsJsonFileParams): Promise<boolean> => {
   try {
     if (!fs.existsSync(path)) {
-      await fs.mkdirSync(path);
+      await fs.mkdirSync(path, { recursive: true });
     }
     await fs.writeFileSync(`${path}${fileName}`, JSON.stringify(data, null, 2));
 
