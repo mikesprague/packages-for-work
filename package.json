@@ -109,5 +109,8 @@
     "commitizen": {
       "path": "./node_modules/cz-git"
     }
+  },
+  "release": {
+    "preset": "conventionalcommits"
   }
 }
