@@ -40,7 +40,7 @@
     "@types/node": "18.15.11",
     "@typescript-eslint/eslint-plugin": "5.58.0",
     "@typescript-eslint/parser": "5.58.0",
-    "changelogen": "0.5.2",
+    "changelogen": "0.5.3",
     "cross-env": "7.0.3",
     "cz-git": "1.6.1",
     "documentation": "14.0.1",
