@@ -54,7 +54,7 @@
     "prettier": "2.8.8",
     "prettier-eslint": "15.0.1",
     "rimraf": "5.0.1",
-    "typescript": "5.1.5"
+    "typescript": "5.1.6"
   },
   "eslintConfig": {
     "env": {
