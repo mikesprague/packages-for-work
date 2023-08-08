@@ -42,7 +42,7 @@
     "@typescript-eslint/parser": "6.2.1",
     "changelogen": "0.5.4",
     "cross-env": "7.0.3",
-    "cz-git": "1.7.0",
+    "cz-git": "1.7.1",
     "documentation": "14.0.2",
     "eslint": "8.46.0",
     "eslint-config-prettier": "9.0.0",
