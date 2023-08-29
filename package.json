@@ -39,7 +39,7 @@
     "@parcel/transformer-typescript-types": "^2.9.3",
     "@types/node": "20.5.7",
     "@typescript-eslint/eslint-plugin": "6.4.1",
-    "@typescript-eslint/parser": "6.4.1",
+    "@typescript-eslint/parser": "6.5.0",
     "changelogen": "0.5.5",
     "cross-env": "7.0.3",
     "cz-git": "1.7.1",
