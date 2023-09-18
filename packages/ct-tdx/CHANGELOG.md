@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/mikesprague/packages/compare/@mikesprague/ct-tdx@0.0.6...@mikesprague/ct-tdx@0.0.7) (2023-09-18)
+
+**Note:** Version bump only for package @mikesprague/ct-tdx
+
+
+
+
+
 ## [0.0.6](https://github.com/mikesprague/packages/compare/@mikesprague/ct-tdx@0.0.5...@mikesprague/ct-tdx@0.0.6) (2023-05-16)
 
 **Note:** Version bump only for package @mikesprague/ct-tdx
