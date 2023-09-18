@@ -34,76 +34,19 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@babel/core": "7.22.20",
+    "@biomejs/biome": "1.2.2",
     "@parcel/packager-ts": "^2.9.3",
     "@parcel/transformer-typescript-types": "^2.9.3",
     "@types/node": "20.6.2",
-    "@typescript-eslint/eslint-plugin": "6.7.0",
-    "@typescript-eslint/parser": "6.7.0",
     "changelogen": "0.5.5",
     "cross-env": "7.0.3",
     "cz-git": "1.7.1",
     "documentation": "14.0.2",
-    "eslint": "8.49.0",
-    "eslint-config-prettier": "9.0.0",
-    "eslint-plugin-import": "2.28.1",
-    "eslint-plugin-prettier": "5.0.0",
     "lerna": "7.3.0",
     "nx": "16.8.1",
     "parcel": "2.9.3",
-    "prettier": "3.0.3",
-    "prettier-eslint": "15.0.1",
     "rimraf": "5.0.1",
     "typescript": "5.2.2"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": false,
-      "commonjs": false,
-      "es6": true,
-      "node": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      "plugin:@typescript-eslint/strict",
-      "prettier"
-    ],
-    "plugins": [
-      "@typescript-eslint",
-      "import",
-      "prettier"
-    ],
-    "parserOptions": {
-      "ecmaVersion": "latest",
-      "allowImportExportEverywhere": true,
-      "parser": "@typescript-eslint/parser",
-      "project": [
-        "./tsconfig.json"
-      ],
-      "ecmaFeatures": {
-        "impliedStrict": true,
-        "modules": true
-      },
-      "sourceType": "module"
-    },
-    "ignorePatterns": [
-      "**/.history/*",
-      "**/node_modules/*",
-      "**/dist/*"
-    ],
-    "rules": {
-      "import/prefer-default-export": "off",
-      "no-console": "warn",
-      "import/extensions": "off"
-    }
-  },
-  "prettier": {
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
   },
   "config": {
     "commitizen": {
