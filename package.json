@@ -30,9 +30,7 @@
     "url": "https://github.com/mikesprague/packages-for-work/issues"
   },
   "homepage": "https://github.com/mikesprague/packages-for-work#readme",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "devDependencies": {
     "@biomejs/biome": "1.2.2",
     "@parcel/packager-ts": "2.9.3",

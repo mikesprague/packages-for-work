@@ -1,5 +1,5 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import https from 'https';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 /**
  * @function getAuthToken
@@ -108,7 +108,7 @@ export const makeApiCall = async ({
   }
 
   const apiData = await axios(httpClientConfig).then(
-    (response) => response.data,
+    (response) => response.data
   );
 
   return apiData;
@@ -202,10 +202,10 @@ export const createTicket = async ({
  * @returns  {Object} with JSON data
  */
 export const getCloudTeamTicketDefaults = async (
-  endpointUrl: string,
+  endpointUrl: string
 ): Promise<any> => {
   const ticketDefaults = await axios(endpointUrl).then(
-    (response) => response.data,
+    (response) => response.data
   );
 
   return ticketDefaults;
