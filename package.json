@@ -43,7 +43,7 @@
     "lerna": "7.3.0",
     "nx": "16.9.1",
     "parcel": "2.9.3",
-    "rimraf": "5.0.4",
+    "rimraf": "5.0.5",
     "typescript": "5.2.2"
   },
   "config": {
