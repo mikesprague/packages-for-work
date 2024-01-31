@@ -39,7 +39,7 @@
     "changelogen": "0.5.5",
     "cross-env": "7.0.3",
     "cz-git": "1.8.0",
-    "documentation": "14.0.2",
+    "documentation": "14.0.3",
     "lerna": "8.0.2",
     "nx": "17.3.0",
     "parcel": "2.11.0",
