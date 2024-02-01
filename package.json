@@ -35,7 +35,7 @@
     "@biomejs/biome": "1.5.3",
     "@parcel/packager-ts": "2.11.0",
     "@parcel/transformer-typescript-types": "2.11.0",
-    "@types/node": "20.11.13",
+    "@types/node": "20.11.15",
     "changelogen": "0.5.5",
     "cross-env": "7.0.3",
     "cz-git": "1.8.0",
