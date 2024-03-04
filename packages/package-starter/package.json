@@ -33,6 +33,9 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "volta": {
+    "extends": "../../package.json"
+  },
   "scripts": {
     "build": "parcel build ./src/index.ts --no-source-maps",
     "changelog": "changelogen",
