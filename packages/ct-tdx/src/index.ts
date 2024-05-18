@@ -1,5 +1,6 @@
-import https from 'https';
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import https from 'node:https';
+import axios from 'axios';
+import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 /**
  * @function getAuthToken
