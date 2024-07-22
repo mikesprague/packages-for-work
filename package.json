@@ -42,7 +42,7 @@
     "cross-env": "7.0.3",
     "cz-git": "1.9.4",
     "documentation": "14.0.3",
-    "lerna": "8.1.6",
+    "lerna": "8.1.7",
     "nx": "19.5.1",
     "parcel": "2.12.0",
     "rimraf": "6.0.1",
