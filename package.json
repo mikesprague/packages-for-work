@@ -40,7 +40,7 @@
     "@types/node": "24.0.1",
     "changelogen": "0.6.1",
     "cross-env": "7.0.3",
-    "cz-git": "1.11.1",
+    "cz-git": "1.11.2",
     "documentation": "14.0.3",
     "lerna": "8.2.2",
     "nx": "21.1.3",
