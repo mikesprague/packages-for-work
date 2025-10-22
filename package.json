@@ -34,7 +34,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@biomejs/biome": "2.2.6",
+    "@biomejs/biome": "2.2.7",
     "@parcel/packager-ts": "2.16.0",
     "@parcel/transformer-typescript-types": "2.16.0",
     "@types/node": "24.9.1",
