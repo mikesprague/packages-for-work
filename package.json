@@ -43,7 +43,7 @@
     "cz-git": "1.12.0",
     "documentation": "14.0.3",
     "lerna": "9.0.1",
-    "nx": "22.0.3",
+    "nx": "22.0.4",
     "parcel": "2.16.1",
     "rimraf": "6.1.0",
     "typescript": "5.9.3"
