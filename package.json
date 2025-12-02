@@ -10,9 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": ">= 20.x",
-    "npm": ">= 10.x"
+    "node": ">= 24.x",
+    "npm": ">= 11.x"
   },
+  "packageManager": "npm@11.6.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/mikesprague/packages-for-work.git"
@@ -48,6 +49,13 @@
     "rimraf": "6.1.2",
     "typescript": "5.9.3"
   },
+  "resolutions": {
+    "@babel/helpers": "7.28.4",
+    "brace-expansion": "4.0.1",
+    "glob": "13.0.0",
+    "nanoid": "5.1.6",
+    "vue-template-compiler": "2.7.16"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-git"
@@ -57,7 +65,7 @@
     "preset": "conventionalcommits"
   },
   "volta": {
-    "node": "22.2.0",
-    "npm": "10.8.0"
+    "node": "24.11.1",
+    "npm": "11.6.4"
   }
 }

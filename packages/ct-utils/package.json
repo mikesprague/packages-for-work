@@ -4,8 +4,8 @@
   "description": "Utilities and helper methods",
   "type": "module",
   "engines": {
-    "node": ">= 18.x",
-    "npm": ">= 8.x"
+    "node": ">= 24.x",
+    "npm": ">= 11.x"
   },
   "source": "src/index.ts",
   "module": "dist/index.js",
