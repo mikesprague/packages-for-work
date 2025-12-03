@@ -27,7 +27,11 @@
     "biome": "npx biome lint .",
     "build": "npx tsdown",
     "clean": "npx rimraf dist",
+    "docs": "documentation readme ./src/index.ts --section=API",
     "dev": "npx tsdown --watch",
+    "postbuild": "npm run docs",
+    "prebuild": "npm run clean",
+    "predev": "npm run clean",
     "typecheck": "npx tsc --noEmit"
   },
   "publishConfig": {

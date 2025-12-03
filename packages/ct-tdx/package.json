@@ -28,6 +28,10 @@
     "build": "npx tsdown",
     "clean": "npx rimraf dist",
     "dev": "npx tsdown --watch",
+    "docs": "documentation readme ./src/index.ts --section=API",
+    "postbuild": "npm run docs",
+    "prebuild": "npm run clean",
+    "predev": "npm run clean",
     "typecheck": "npx tsc --noEmit"
   },
   "publishConfig": {
