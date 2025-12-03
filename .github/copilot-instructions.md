@@ -219,7 +219,6 @@ chore(deps): update typescript to 5.9
 
 ### Allowed Dependencies
 
-- `axios` - HTTP client (used in ct-tdx)
 - Node.js built-in modules (prefer `node:` prefix)
 
 ### Avoid
