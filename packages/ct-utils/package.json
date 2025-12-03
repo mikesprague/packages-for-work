@@ -1,6 +1,6 @@
 {
   "name": "@mikesprague/ct-utils",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Utilities and helper methods",
   "type": "module",
   "engines": {
