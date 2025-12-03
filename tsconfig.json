@@ -39,7 +39,7 @@
     "skipLibCheck": true,
 
     // Projects
-    "composite": true,
+    "composite": true
   },
   "references": [
     { "path": "./packages/ct-tdx" },

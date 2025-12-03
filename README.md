@@ -41,7 +41,7 @@ npx biome check .
 
 ### Repository Structure
 
-```
+```shell
 packages-for-work/
 ├── packages/
 │   ├── ct-tdx/          # TeamDynamix API helpers
@@ -112,7 +112,7 @@ packages-for-work/
 
 We use [Conventional Commits](https://www.conventionalcommits.org/):
 
-```
+```shell
 <type>(<scope>): <description>
 
 [optional body]
@@ -135,7 +135,7 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 **Breaking Changes:**
 Add `!` after type for a **major** version bump:
 
-```
+```shell
 feat!: remove deprecated API method
 ```
 
@@ -311,7 +311,7 @@ Automatically merges minor/patch dependency updates from Dependabot.
 
 Create or update `~/.npmrc`:
 
-```
+```shell
 @mikesprague:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
 ```
@@ -330,7 +330,7 @@ npm install @mikesprague/ct-utils
 | Tool | Purpose |
 |------|---------|
 | [Nx](https://nx.dev) | Monorepo orchestration, caching, and release management |
-| [tsdown](https://github.com/niconiahi/tsdown) | TypeScript library bundler (ESM + CJS) |
+| [tsdown](https://github.com/rolldown/tsdown) | TypeScript library bundler (ESM + CJS) |
 | [Biome](https://biomejs.dev) | Linting and formatting |
 | [TypeScript](https://www.typescriptlang.org) | Type checking |
 
