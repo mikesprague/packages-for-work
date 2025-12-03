@@ -18,10 +18,28 @@
   "release": {
     "projects": ["packages/ct-tdx", "packages/ct-utils"],
     "projectsRelationship": "independent",
+    "conventionalCommits": {
+      "types": {
+        "refactor": {
+          "semverBump": "minor",
+          "changelog": {
+            "title": "♻️ Refactoring"
+          }
+        },
+        "build": {
+          "changelog": {
+            "hidden": true
+          }
+        }
+      }
+    },
     "changelog": {
       "workspaceChangelog": false,
       "projectChangelogs": {
-        "createRelease": "github"
+        "createRelease": "github",
+        "renderOptions": {
+          "authors": false
+        }
       }
     },
     "version": {
