@@ -9,6 +9,7 @@
     "clean": "npx nx run-many --target=clean --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
     "lint": "npm run biome && npm run typecheck",
     "release": "npx nx release",
+    "release:dry-run": "npm run release -- --dry-run",
     "release:version": "npx nx release version",
     "release:changelog": "npx nx release changelog",
     "release:publish": "npx nx release publish",
