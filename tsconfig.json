@@ -1,42 +1,54 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    // Type Checking
     "strict": true,
-    "declaration": true,
-    "experimentalDecorators": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "target": "ESNext",
-    "module": "ESNext",
-    "sourceMap": true,
     "strictFunctionTypes": true,
-    "types": ["node"],
-    "allowSyntheticDefaultImports": true,
-    "lib": ["ESNext"],
-    "moduleResolution": "Node",
-    "removeComments": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Modules - NodeNext for Node.js libraries
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
     "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noEmit": true,
+
+    // Interop
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "."
-  },
-  "ts-node": {
-    "esm": true,
-    "swc": true
+
+    // Language and Environment
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "types": ["node"],
+
+    // Completeness
+    "skipLibCheck": true,
+
+    // Projects
+    "composite": true,
   },
   "references": [
-    { "path": "./packages/ct-tdx/" },
-    { "path": "./packages/ct-utils/" }
+    { "path": "./packages/ct-tdx" },
+    { "path": "./packages/ct-utils" }
   ],
-  // "include": ["./packages/**/*.ts", "./packages/**/*.js"],
   "exclude": [
     "node_modules",
-    "./packages/package-starter",
-    "./packages/ct-azure",
-    ".history",
-    ".git",
-    ".github",
-    ".parcel-cache",
-    "./**/dist/**"
+    "**/dist",
+    "packages/package-starter",
+    "packages/ct-azure"
   ]
 }

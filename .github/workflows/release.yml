@@ -1,0 +1,81 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (no actual changes)"
+        required: false
+        default: false
+        type: boolean
+      verbose:
+        description: "Verbose output"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  packages: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: "24"
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 👷  Checkout Repo
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔧  Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: 🏗️  Setup Node.js ${{ env.NODE_VERSION }} environment
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          check-latest: true
+          cache: npm
+          cache-dependency-path: "**/package-lock.json"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@mikesprague"
+
+      - name: ⬆️  Update npm and install dependencies
+        run: npm i --location=global npm && npm ci
+
+      - name: 📦  Build packages
+        run: npm run build
+
+      - name: ✅  Type check
+        run: npm run typecheck
+
+      - name: 🔍  Lint check
+        run: npx biome check .
+
+      - name: 🏷️  Version and Changelog (dry run)
+        if: ${{ inputs.dry_run }}
+        run: |
+          npx nx release --dry-run ${{ inputs.verbose && '--verbose' || '' }}
+
+      - name: 🏷️  Version and Changelog
+        if: ${{ !inputs.dry_run }}
+        run: |
+          npx nx release ${{ inputs.verbose && '--verbose' || '' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🚀  Publish packages
+        if: ${{ !inputs.dry_run }}
+        run: npx nx release publish

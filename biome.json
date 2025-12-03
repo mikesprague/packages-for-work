@@ -1,19 +1,21 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
-  "files": {
-    "ignore": [
-      "**/.devcontainer/*",
-      "**/.git/*",
-      "**/.github/*",
-      "**/.parcel-cache/*",
-      "**/.history/*",
-      "**/.vscode/*",
-      "**/node_modules/*",
-      "**/dist/*"
-    ]
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
   },
-  "organizeImports": {
-    "enabled": true
+  "files": {
+    "includes": [
+      "**",
+      "!**/.devcontainer",
+      "!**/.git",
+      "!**/.github",
+      "!**/.history",
+      "!**/.vscode",
+      "!**/node_modules",
+      "!**/dist"
+    ]
   },
   "linter": {
     "enabled": true,
@@ -23,7 +25,15 @@
         "noExplicitAny": "warn"
       },
       "correctness": {
-        "all": true
+        "recommended": true
+      }
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
       }
     }
   },
@@ -41,7 +51,7 @@
       "jsxQuoteStyle": "single",
       "quoteStyle": "single",
       "semicolons": "always",
-      "trailingComma": "es5"
+      "trailingCommas": "es5"
     }
   }
 }
