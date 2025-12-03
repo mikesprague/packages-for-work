@@ -4,10 +4,13 @@
   "description": "Monorepo to temporarily host some packages for work until we set up our new Org",
   "type": "module",
   "scripts": {
-    "build": "nx run-many --target=build --exclude=@mikesprague/package-starter",
-    "bump": "lerna version --no-private --no-push",
-    "prebuild": "nx run-many --targets=typecheck,clean --exclude=@mikesprague/package-starter",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nx run-many --target=build --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "clean": "nx run-many --target=clean --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "typecheck": "nx run-many --target=typecheck --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "release": "nx release",
+    "release:version": "nx release version",
+    "release:changelog": "nx release changelog",
+    "release:publish": "nx release publish"
   },
   "engines": {
     "node": ">= 24.x",
@@ -36,33 +39,21 @@
   ],
   "devDependencies": {
     "@biomejs/biome": "2.3.8",
-    "@parcel/packager-ts": "2.16.1",
-    "@parcel/transformer-typescript-types": "2.16.1",
+    "@nx/js": "22.1.3",
+    "@swc-node/register": "1.11.1",
+    "@swc/core": "1.15.3",
+    "@swc/helpers": "0.5.17",
     "@types/node": "24.10.1",
-    "changelogen": "0.6.2",
-    "cross-env": "10.1.0",
     "cz-git": "1.12.0",
-    "documentation": "14.0.3",
-    "lerna": "9.0.3",
     "nx": "22.1.3",
-    "parcel": "2.16.1",
     "rimraf": "6.1.2",
+    "tsdown": "0.17.0-beta.6",
     "typescript": "5.9.3"
-  },
-  "resolutions": {
-    "@babel/helpers": "7.28.4",
-    "brace-expansion": "4.0.1",
-    "glob": "13.0.0",
-    "nanoid": "5.1.6",
-    "vue-template-compiler": "2.7.16"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-git"
     }
-  },
-  "release": {
-    "preset": "conventionalcommits"
   },
   "volta": {
     "node": "24.11.1",

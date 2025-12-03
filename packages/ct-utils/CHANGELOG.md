@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @mikesprague/ct-utils
 
-
-
-
-
 ## [0.0.4](https://github.com/mikesprague/packages/compare/@mikesprague/ct-utils@0.0.3...@mikesprague/ct-utils@0.0.4) (2023-04-10)
 
 ### Features

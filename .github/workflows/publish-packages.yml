@@ -2,7 +2,8 @@ name: Publish to GitHub Packages
 
 on:
   push:
-    tags: [ "@mikesprague/*" ]
+    tags:
+      - "@mikesprague/*@*"
 
   workflow_dispatch:
 
@@ -15,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: "22"
+  NODE_VERSION: "24"
   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
@@ -43,4 +44,4 @@ jobs:
         run: npm run build
 
       - name: 🚀  Publish packages
-        run: lerna publish from-git -y
+        run: npx nx release publish
