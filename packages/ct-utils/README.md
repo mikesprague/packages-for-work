@@ -42,19 +42,17 @@ See API section below for docs on each method available
 
 #### Parameters
 
-*   `obj` **writeDataAsJsonFileParams** object with parameters
+*   `obj` **WriteDataAsJsonFileParams** object with parameters
 
-    *   `obj.path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
-    *   `obj.fileName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
     *   `obj.data` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**&#x20;
+    *   `obj.fileName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** name of the file to write (including path and .json extension)
 
 #### Examples
 
 ```javascript
 await writeDataAsJsonFile({
-  path: 'outputDirectory/',
-  fileName: 'my-data.json',
   data: referenceToDataObject
+  fileName: 'outputDirectory/my-data.json',
 });
 ```
 
