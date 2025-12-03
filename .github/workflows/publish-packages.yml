@@ -16,8 +16,9 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: "24"
+  NODE_VERSION: 24
   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NX_TUI: false
 
 jobs:
   build_and_publish:
@@ -42,6 +43,9 @@ jobs:
 
       - name: 📦  Build packages
         run: npm run build
+
+      - name: ✅  Run tests and linters
+        run: npm test
 
       - name: 🚀  Publish packages
         run: npx nx release publish

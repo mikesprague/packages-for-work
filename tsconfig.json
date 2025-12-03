@@ -47,8 +47,16 @@
   ],
   "exclude": [
     "node_modules",
-    "**/dist",
+    "**/dist/**",
     "packages/package-starter",
-    "packages/ct-azure"
+    "packages/ct-azure",
+    "**/src/**/*.d.ts",
+    "**/src/**/*.test.ts",
+    "**/src/**/scratch*.ts",
+    "**/node_modules/**",
+    ".history",
+    ".git",
+    ".github",
+    "<node_internals>/**"
   ]
 }

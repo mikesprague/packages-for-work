@@ -24,10 +24,11 @@
     "extends": "../../package.json"
   },
   "scripts": {
-    "build": "tsdown",
-    "clean": "rimraf dist",
-    "dev": "tsdown --watch",
-    "typecheck": "tsc --noEmit"
+    "biome": "npx biome lint .",
+    "build": "npx tsdown",
+    "clean": "npx rimraf dist",
+    "dev": "npx tsdown --watch",
+    "typecheck": "npx tsc --noEmit"
   },
   "publishConfig": {
     "@mikesprague:registry": "https://npm.pkg.github.com",

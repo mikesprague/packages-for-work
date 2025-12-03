@@ -4,13 +4,19 @@
   "description": "Monorepo to temporarily host some packages for work until we set up our new Org",
   "type": "module",
   "scripts": {
-    "build": "nx run-many --target=build --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "clean": "nx run-many --target=clean --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "typecheck": "nx run-many --target=typecheck --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "release": "nx release",
-    "release:version": "nx release version",
-    "release:changelog": "nx release changelog",
-    "release:publish": "nx release publish"
+    "biome": "npx nx run-many --target=biome --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "build": "npx nx run-many --target=build --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "clean": "npx nx run-many --target=clean --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "lint": "npm run biome && npm run typecheck",
+    "release": "npx nx release",
+    "release:version": "npx nx release version",
+    "release:changelog": "npx nx release changelog",
+    "release:publish": "npx nx release publish",
+    "test": "npm run lint && npm run vitest:coverage -- --silent",
+    "typecheck": "npx nx run-many --target=typecheck --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "vitest": "npx vitest run",
+    "vitest:watch": "npx vitest run --watch",
+    "vitest:coverage": "npx vitest run --coverage"
   },
   "engines": {
     "node": ">= 24.x",
@@ -40,15 +46,18 @@
   "devDependencies": {
     "@biomejs/biome": "2.3.8",
     "@nx/js": "22.1.3",
+    "@nx/vite": "22.1.3",
     "@swc-node/register": "1.11.1",
     "@swc/core": "1.15.3",
     "@swc/helpers": "0.5.17",
     "@types/node": "24.10.1",
+    "@vitest/coverage-v8": "4.0.15",
     "cz-git": "1.12.0",
     "nx": "22.1.3",
     "rimraf": "6.1.2",
     "tsdown": "0.17.0-beta.6",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "4.0.15"
   },
   "config": {
     "commitizen": {

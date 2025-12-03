@@ -5,12 +5,14 @@
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "sharedGlobals": [
       "{workspaceRoot}/tsconfig.json",
-      "{workspaceRoot}/biome.json"
+      "{workspaceRoot}/biome.json",
+      "{workspaceRoot}/vitest.config.ts"
     ],
     "production": [
       "default",
       "!{projectRoot}/**/*.spec.ts",
-      "!{projectRoot}/**/*.test.ts"
+      "!{projectRoot}/**/*.test.ts",
+      "!{projectRoot}/vitest.config.ts"
     ]
   },
   "release": {
@@ -43,6 +45,11 @@
     },
     "clean": {
       "cache": false
+    },
+    "test": {
+      "cache": true,
+      "inputs": ["default", "^production"],
+      "outputs": ["{workspaceRoot}/coverage"]
     }
   },
   "defaultBase": "main",
