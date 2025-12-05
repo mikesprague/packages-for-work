@@ -28,10 +28,6 @@
     "type": "git",
     "url": "https://github.com/mikesprague/packages-for-work.git"
   },
-  "publishConfig": {
-    "@mikesprague:registry": "https://npm.pkg.github.com",
-    "access": "public"
-  },
   "author": {
     "name": "Michael Sprague",
     "email": "mikesprague@gmail.com"

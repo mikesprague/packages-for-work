@@ -68,6 +68,12 @@
       "cache": true,
       "inputs": ["default", "^production"],
       "outputs": ["{workspaceRoot}/coverage"]
+    },
+    "nx-release-publish": {
+      "options": {
+        "registry": "https://npm.pkg.github.com",
+        "access": "public"
+      }
     }
   },
   "defaultBase": "main",
