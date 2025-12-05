@@ -27,8 +27,9 @@
           }
         },
         "build": {
+          "semverBump": "patch",
           "changelog": {
-            "hidden": true
+            "title": "👷 Build System"
           }
         }
       }
