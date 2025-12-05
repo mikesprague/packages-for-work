@@ -4,10 +4,10 @@ A TypeScript monorepo containing internal npm packages published to GitHub Packa
 
 ## Packages
 
-| Package | Description | Version |
-|---------|-------------|---------|
-| [@mikesprague/ct-tdx](./packages/ct-tdx) | TeamDynamix API helper library | ![npm](https://img.shields.io/npm/v/@mikesprague/ct-tdx?registry_uri=https://npm.pkg.github.com) |
-| [@mikesprague/ct-utils](./packages/ct-utils) | General utilities and helper methods | ![npm](https://img.shields.io/npm/v/@mikesprague/ct-utils?registry_uri=https://npm.pkg.github.com) |
+| Package | Description |
+|---------|-------------|
+| [@mikesprague/ct-tdx](./packages/ct-tdx) | TeamDynamix API helper library |
+| [@mikesprague/ct-utils](./packages/ct-utils) | General utilities and helper methods |
 
 ## Prerequisites
 
