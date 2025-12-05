@@ -1,3 +1,13 @@
+## 0.1.2 (2025-12-05)
+
+### 🩹 Fixes
+
+- **ct-tdx/ct-utils:** fix links ([7b9b66d](https://github.com/mikesprague/packages-for-work/commit/7b9b66d))
+
+### 👷 Build System
+
+- **npm:** move publish config to nx ([94b16be](https://github.com/mikesprague/packages-for-work/commit/94b16be))
+
 ## 0.1.1 (2025-12-03)
 
 This was a version bump only for @mikesprague/ct-tdx to align it with other projects, there were no code changes.
