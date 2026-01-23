@@ -51,7 +51,7 @@
     "@vitest/coverage-v8": "4.0.17",
     "cz-git": "1.12.0",
     "documentation": "14.0.3",
-    "nx": "22.4.0",
+    "nx": "22.4.1",
     "rimraf": "6.1.2",
     "tsdown": "0.20.0-beta.4",
     "typedoc": "^0.28.16",
