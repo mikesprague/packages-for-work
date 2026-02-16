@@ -42,7 +42,7 @@
   ],
   "devDependencies": {
     "@biomejs/biome": "2.3.15",
-    "@nx/js": "22.5.0",
+    "@nx/js": "22.5.1",
     "@nx/vite": "22.5.0",
     "@swc-node/register": "1.11.1",
     "@swc/core": "1.15.11",
