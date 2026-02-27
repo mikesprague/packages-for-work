@@ -23,7 +23,7 @@
     "node": ">= 24.x",
     "npm": ">= 11.x"
   },
-  "packageManager": "npm@11.8.0",
+  "packageManager": "npm@11.11.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/mikesprague/packages-for-work.git"
@@ -59,7 +59,8 @@
     "vitest": "4.0.18"
   },
   "overrides": {
-    "vue-template-compiler": "3.0.0"
+    "minimatch": "^10.2.4",
+    "vue-template-compiler": "^3.0.0"
   },
   "config": {
     "commitizen": {
@@ -67,7 +68,7 @@
     }
   },
   "volta": {
-    "node": "25.4.0",
-    "npm": "11.8.0"
+    "node": "25.7.0",
+    "npm": "11.11.0"
   }
 }
