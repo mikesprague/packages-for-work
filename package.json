@@ -46,7 +46,7 @@
     "@nx/vite": "22.6.1",
     "@swc-node/register": "1.11.1",
     "@swc/core": "1.15.21",
-    "@swc/helpers": "0.5.19",
+    "@swc/helpers": "0.5.20",
     "@types/node": "25.5.0",
     "@vitest/coverage-v8": "4.1.1",
     "cz-git": "1.12.0",
