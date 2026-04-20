@@ -45,7 +45,7 @@
     "@nx/js": "22.6.5",
     "@nx/vite": "22.6.5",
     "@swc-node/register": "1.11.1",
-    "@swc/core": "1.15.26",
+    "@swc/core": "1.15.30",
     "@swc/helpers": "0.5.21",
     "@types/node": "25.6.0",
     "@vitest/coverage-v8": "4.1.4",
