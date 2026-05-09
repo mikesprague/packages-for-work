@@ -37,17 +37,19 @@
     "extends": "../../package.json"
   },
   "scripts": {
-    "build": "parcel build ./src/index.ts --no-source-maps",
-    "changelog": "changelogen",
-    "clean": "rimraf dist",
-    "docs": "documentation readme ./src/index.ts --section=API",
+    "build": "npx tsdown",
+    "clean": "npx rimraf dist",
+    "dev": "npx tsdown --watch",
+    "docs": "npx documentation readme ./src/index.ts --section=API",
+    "format": "npx oxfmt src",
+    "format:check": "npx oxfmt --check src",
+    "lint": "npx oxlint src",
     "postbuild": "npm run docs",
     "prebuild": "npm run clean && npm run typecheck",
     "prestart": "npm run clean",
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "typecheck": "tsc --noEmit",
-    "watch": "parcel watch"
+    "typecheck": "npx tsc --noEmit"
   },
   "publishConfig": {
     "@mikesprague:registry": "https://npm.pkg.github.com",
@@ -55,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikesprague/packages.git",
+    "url": "git+https://github.com/mikesprague/packages-for-work.git",
     "directory": "packages/package-starter"
   },
   "author": {
@@ -64,9 +66,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikesprague/packages/issues"
+    "url": "https://github.com/mikesprague/packages-for-work/issues"
   },
-  "homepage": "https://github.com/mikesprague/packages#readme",
+  "homepage": "https://github.com/mikesprague/packages-for-work#readme",
   "dependencies": {},
   "devDependencies": {}
 }

@@ -1,7 +1,7 @@
 {
-  "name": "@mikesprague/ct-utils",
+  "name": "@mikesprague/ct-tdx",
   "version": "0.1.2",
-  "description": "Utilities and helper methods",
+  "description": "Helper methods for working with the TeamDynamix API",
   "type": "module",
   "engines": {
     "node": ">= 24.x",
@@ -26,11 +26,11 @@
   "scripts": {
     "build": "npx tsdown",
     "clean": "npx rimraf dist",
-    "docs": "npx documentation readme ./src/index.ts --section=API",
     "dev": "npx tsdown --watch",
+    "docs": "npx documentation readme ./src/index.ts --section=API",
     "format": "npx oxfmt src",
     "format:check": "npx oxfmt --check src",
-    "lint": "npx oxlint src",
+    "oxlint": "npx oxlint .",
     "postbuild": "npm run docs",
     "prebuild": "npm run clean",
     "predev": "npm run clean",
@@ -39,7 +39,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikesprague/packages-for-work.git",
-    "directory": "packages/ct-utils"
+    "directory": "packages/ct-tdx"
   },
   "author": {
     "name": "Michael Sprague",
@@ -49,5 +49,6 @@
   "bugs": {
     "url": "https://github.com/mikesprague/packages-for-work/issues"
   },
-  "homepage": "https://github.com/mikesprague/packages-for-work#readme"
+  "homepage": "https://github.com/mikesprague/packages#readme",
+  "dependencies": {}
 }

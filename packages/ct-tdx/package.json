@@ -24,11 +24,13 @@
     "extends": "../../package.json"
   },
   "scripts": {
-    "biome": "npx biome lint .",
     "build": "npx tsdown",
     "clean": "npx rimraf dist",
     "dev": "npx tsdown --watch",
-    "docs": "documentation readme ./src/index.ts --section=API",
+    "docs": "npx documentation readme ./src/index.ts --section=API",
+    "format": "npx oxfmt src",
+    "format:check": "npx oxfmt --check src",
+    "lint": "npx oxlint src",
     "postbuild": "npm run docs",
     "prebuild": "npm run clean",
     "predev": "npm run clean",

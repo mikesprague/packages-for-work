@@ -5,7 +5,8 @@
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "sharedGlobals": [
       "{workspaceRoot}/tsconfig.json",
-      "{workspaceRoot}/biome.json",
+      "{workspaceRoot}/.oxfmtrc.json",
+      "{workspaceRoot}/.oxlintrc.json",
       "{workspaceRoot}/vitest.config.ts"
     ],
     "production": [
@@ -93,5 +94,6 @@
         }
       }
     }
-  ]
+  ],
+  "analytics": false
 }

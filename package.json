@@ -4,10 +4,12 @@
   "description": "Monorepo to temporarily host some packages for work until we set up our new Org",
   "type": "module",
   "scripts": {
-    "biome": "npx nx run-many --target=biome --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
     "build": "npx nx run-many --target=build --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
     "clean": "npx nx run-many --target=clean --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "lint": "npm run biome && npm run typecheck",
+    "format": "npx nx run-many --target=format --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "format:check": "npx nx run-many --target=format:check --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "lint": "npm run oxlint && npm run typecheck",
+    "oxlint": "npx nx run-many --target=lint --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
     "release": "npx nx release",
     "release:dry-run": "npm run release -- --dry-run",
     "release:version": "npx nx release version",
@@ -23,7 +25,7 @@
     "node": ">= 24.x",
     "npm": ">= 11.x"
   },
-  "packageManager": "npm@11.13.0",
+  "packageManager": "npm@11.14.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/mikesprague/packages-for-work.git"
@@ -41,7 +43,6 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@biomejs/biome": "2.4.14",
     "@nx/js": "22.7.1",
     "@nx/vite": "22.7.1",
     "@swc-node/register": "1.11.1",
@@ -49,9 +50,11 @@
     "@swc/helpers": "0.5.21",
     "@types/node": "25.6.2",
     "@vitest/coverage-v8": "4.1.5",
-    "cz-git": "1.13.0",
+    "cz-git": "1.13.1",
     "documentation": "14.0.3",
     "nx": "22.7.1",
+    "oxfmt": "0.48.0",
+    "oxlint": "1.63.0",
     "rimraf": "6.1.3",
     "tsdown": "0.22.0",
     "typedoc": "^0.28.19",
@@ -59,11 +62,12 @@
     "vitest": "4.1.5"
   },
   "overrides": {
-    "brace-expansion": "^5.0.5",
+    "axios": "1.16.0",
+    "brace-expansion": "^5.0.6",
     "follow-redirects": "^1.16.0",
     "minimatch": "^10.2.5",
     "vue-template-compiler": "^3.0.0",
-    "yaml": "^2.8.3"
+    "yaml": "^2.8.4"
   },
   "config": {
     "commitizen": {
@@ -71,7 +75,7 @@
     }
   },
   "volta": {
-    "node": "25.9.0",
-    "npm": "11.13.0"
+    "node": "26.1.0",
+    "npm": "11.14.1"
   }
 }

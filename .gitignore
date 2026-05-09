@@ -51,3 +51,5 @@ dist
 
 # Misc
 ct-azure
+.DS_Store
+.parcel-cache
