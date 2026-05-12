@@ -54,7 +54,7 @@
     "documentation": "14.0.3",
     "nx": "22.7.1",
     "oxfmt": "0.49.0",
-    "oxlint": "1.63.0",
+    "oxlint": "1.64.0",
     "rimraf": "6.1.3",
     "tsdown": "0.22.0",
     "typedoc": "^0.28.19",
