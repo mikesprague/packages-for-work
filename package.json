@@ -52,7 +52,7 @@
     "@vitest/coverage-v8": "4.1.9",
     "cz-git": "1.13.1",
     "documentation": "14.0.3",
-    "nx": "23.0.0",
+    "nx": "23.0.1",
     "oxfmt": "0.56.0",
     "oxlint": "1.71.0",
     "rimraf": "6.1.3",
