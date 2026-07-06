@@ -49,7 +49,7 @@
     "@swc/core": "1.15.43",
     "@swc/helpers": "0.5.23",
     "@types/node": "26.1.0",
-    "@vitest/coverage-v8": "4.1.9",
+    "@vitest/coverage-v8": "4.1.10",
     "cz-git": "1.13.1",
     "documentation": "14.0.3",
     "nx": "23.0.1",
