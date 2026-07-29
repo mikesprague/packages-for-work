@@ -25,7 +25,7 @@
     "node": ">= 24.x",
     "npm": ">= 11.x"
   },
-  "packageManager": "npm@11.17.0",
+  "packageManager": "npm@12.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/mikesprague/packages-for-work.git"
@@ -46,7 +46,7 @@
     "@nx/js": "23.1.0",
     "@nx/vite": "23.1.0",
     "@swc-node/register": "1.12.1",
-    "@swc/core": "1.15.46",
+    "@swc/core": "1.15.47",
     "@swc/helpers": "0.5.23",
     "@types/node": "26.1.2",
     "@vitest/coverage-v8": "4.1.10",
@@ -62,16 +62,12 @@
     "vitest": "4.1.10"
   },
   "overrides": {
-    "axios": "1.18.0",
-    "brace-expansion": "^5.0.6",
+    "axios": "1.19.0",
+    "brace-expansion": "^5.0.8",
     "follow-redirects": "^1.16.0",
-    "form-data": "^4.0.6",
     "glob": "^13.0.6",
-    "minimatch": "^10.2.5",
-    "tmp": "^0.2.7",
-    "uuid": "^14.0.0",
-    "vue-template-compiler": "^3.0.0",
-    "yaml": "^2.9.0"
+    "uuid": "^14.0.1",
+    "vue-template-compiler": "^3.0.0"
   },
   "config": {
     "commitizen": {
@@ -79,11 +75,12 @@
     }
   },
   "volta": {
-    "node": "26.3.0",
-    "npm": "11.17.0"
+    "node": "26.5.1",
+    "npm": "12.0.1"
   },
   "allowScripts": {
-    "@swc/core@1.15.41": true,
-    "nx@23.0.0": true
+    "fsevents@2.3.3": true,
+    "@swc/core@1.15.47": true,
+    "nx@23.1.0": true
   }
 }
