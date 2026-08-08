@@ -20,9 +20,6 @@
   "files": [
     "dist"
   ],
-  "volta": {
-    "extends": "../../package.json"
-  },
   "scripts": {
     "build": "npx tsdown",
     "clean": "npx rimraf dist",

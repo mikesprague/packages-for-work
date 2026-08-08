@@ -25,7 +25,7 @@
     "node": ">= 24.x",
     "npm": ">= 11.x"
   },
-  "packageManager": "npm@12.0.1",
+  "packageManager": "npm@12.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/mikesprague/packages-for-work.git"
@@ -48,7 +48,7 @@
     "@swc-node/register": "1.12.1",
     "@swc/core": "1.15.47",
     "@swc/helpers": "0.5.23",
-    "@types/node": "26.1.2",
+    "@types/node": "26.2.0",
     "@vitest/coverage-v8": "4.1.10",
     "cz-git": "1.13.1",
     "documentation": "14.0.3",
@@ -63,7 +63,7 @@
   },
   "overrides": {
     "axios": "1.19.0",
-    "brace-expansion": "^5.0.8",
+    "brace-expansion": "^5.0.9",
     "follow-redirects": "^1.16.0",
     "glob": "^13.0.6",
     "uuid": "^14.0.1",
@@ -74,13 +74,9 @@
       "path": "./node_modules/cz-git"
     }
   },
-  "volta": {
-    "node": "26.5.1",
-    "npm": "12.0.1"
-  },
   "allowScripts": {
     "fsevents@2.3.3": true,
     "@swc/core@1.15.47": true,
-    "nx@23.1.0": true
+    "nx@23.1.1": true
   }
 }

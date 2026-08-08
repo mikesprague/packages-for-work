@@ -33,9 +33,6 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "volta": {
-    "extends": "../../package.json"
-  },
   "scripts": {
     "build": "npx tsdown",
     "clean": "npx rimraf dist",
