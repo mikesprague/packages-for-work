@@ -50,7 +50,7 @@
     "@swc/helpers": "0.5.23",
     "@types/node": "26.2.0",
     "@vitest/coverage-v8": "4.1.10",
-    "cz-git": "1.13.1",
+    "cz-git": "1.13.2",
     "documentation": "14.0.3",
     "nx": "23.1.1",
     "oxfmt": "0.63.0",
