@@ -48,7 +48,7 @@
     "@swc-node/register": "1.12.1",
     "@swc/core": "1.16.12",
     "@swc/helpers": "0.5.23",
-    "@types/node": "26.6.3",
+    "@types/node": "26.6.4",
     "@vitest/coverage-v8": "5.0.2",
     "cz-git": "1.14.0",
     "documentation": "14.0.3",
