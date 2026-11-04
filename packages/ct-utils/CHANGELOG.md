@@ -1,3 +1,9 @@
+## 0.1.3 (2026-11-04)
+
+### 👷 Build System
+
+- biome -> oxc (oxfmt/oxlint) ([b87349c](https://github.com/mikesprague/packages-for-work/commit/b87349c))
+
 ## 0.1.2 (2025-12-05)
 
 ### 🩹 Fixes
