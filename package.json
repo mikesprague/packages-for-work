@@ -4,28 +4,28 @@
   "description": "Monorepo to temporarily host some packages for work until we set up our new Org",
   "type": "module",
   "scripts": {
-    "build": "npx nx run-many --target=build --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "clean": "npx nx run-many --target=clean --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "format": "npx nx run-many --target=format --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "format:check": "npx nx run-many --target=format:check --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "build": "nx run-many --target=build --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "clean": "nx run-many --target=clean --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "format": "nx run-many --target=format --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "format:check": "nx run-many --target=format:check --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
     "lint": "npm run oxlint && npm run typecheck",
-    "oxlint": "npx nx run-many --target=lint --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "release": "npx nx release",
+    "oxlint": "nx run-many --target=lint --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "release": "nx release",
     "release:dry-run": "npm run release -- --dry-run",
-    "release:version": "npx nx release version",
-    "release:changelog": "npx nx release changelog",
-    "release:publish": "npx nx release publish",
+    "release:version": "nx release version",
+    "release:changelog": "nx release changelog",
+    "release:publish": "nx release publish",
     "test": "npm run lint && npm run vitest:coverage -- --silent",
-    "typecheck": "npx nx run-many --target=typecheck --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
-    "vitest": "npx vitest run",
-    "vitest:watch": "npx vitest run --watch",
-    "vitest:coverage": "npx vitest run --coverage"
+    "typecheck": "nx run-many --target=typecheck --exclude=@mikesprague/package-starter,@mikesprague/ct-azure",
+    "vitest": "vitest run",
+    "vitest:watch": "vitest run --watch",
+    "vitest:coverage": "vitest run --coverage"
   },
   "engines": {
-    "node": ">= 24.x",
-    "npm": ">= 11.x"
+    "node": ">= 26.x",
+    "npm": ">= 12.x"
   },
-  "packageManager": "npm@12.0.2",
+  "packageManager": "npm@12.2.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/mikesprague/packages-for-work.git"
@@ -43,31 +43,30 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@nx/js": "24.0.3",
-    "@nx/vite": "24.0.3",
+    "@nx/js": "24.0.4",
+    "@nx/vite": "24.0.4",
     "@swc-node/register": "1.12.1",
     "@swc/core": "1.16.21",
-    "@swc/helpers": "0.5.23",
+    "@swc/helpers": "0.5.24",
     "@types/node": "26.6.6",
-    "@vitest/coverage-v8": "5.0.5",
+    "@vitest/coverage-v8": "5.1.0",
     "cz-git": "1.14.0",
     "documentation": "14.0.3",
-    "nx": "24.0.3",
-    "oxfmt": "0.75.0",
-    "oxlint": "1.90.0",
-    "rimraf": "6.1.3",
-    "tsdown": "0.23.4",
-    "typedoc": "^0.28.20",
+    "nx": "24.0.4",
+    "oxfmt": "0.76.0",
+    "oxlint": "1.91.0",
+    "rimraf": "6.1.4",
+    "tsdown": "0.23.5",
+    "typedoc": "0.28.20",
     "typescript": "npm:@typescript/typescript6@6.0.3",
     "@typescript/native": "npm:typescript@7.0.2",
-    "vitest": "5.0.5"
+    "vitest": "5.1.0"
   },
   "overrides": {
-    "axios": "^1.20.0",
+    "axios": "^1.21.0",
     "brace-expansion": "^5.0.12",
-    "glob": "^13.0.6",
-    "smol-toml": "^1.9.0",
-    "uuid": "^14.0.2",
+    "smol-toml": "^1.9.1",
+    "uuid": "^14.0.3",
     "vue-template-compiler": "^3.0.0"
   },
   "config": {
@@ -77,7 +76,7 @@
   },
   "allowScripts": {
     "fsevents@2.3.3": true,
-    "@swc/core@1.16.2": true,
-    "nx@23.2.1": true
+    "@swc/core@1.16.21": true,
+    "nx@24.0.4": true
   }
 }
