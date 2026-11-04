@@ -23,7 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  NODE_VERSION: "24"
+  NODE_VERSION: "26"
   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
@@ -53,7 +53,7 @@ jobs:
           scope: "@mikesprague"
 
       - name: ⬆️  Update npm and install dependencies
-        run: npm i --location=global npm && npm ci
+        run: npm i --location=global npm && npm install
 
       - name: 📦  Build packages
         run: npm run build
